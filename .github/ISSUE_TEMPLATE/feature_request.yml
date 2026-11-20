@@ -1,0 +1,58 @@
+name: Feature request
+description: Suggest a feature or workflow improvement
+title: "feat: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the workflow, not only the implementation. Concrete use cases
+        are the fastest way to get a feature prioritized.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      placeholder: I manage skills for three agents and...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would you like SkillStore to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Marketplace / card view
+        - Sidebar tree
+        - Install / upgrade / uninstall
+        - Publish
+        - Settings / registries
+        - Local registry server
+        - Registry API
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, links, or examples from other tools.
+    validations:
+      required: false

@@ -1,0 +1,88 @@
+name: Bug report
+description: Report a reproducible problem with SkillStore
+title: "bug: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please search existing issues first.
+
+        Do not include secrets, tokens, or private registry URLs.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the problem.
+      placeholder: When I click Install, the panel shows...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the smallest set of steps that reproduces the issue.
+      placeholder: |
+        1. Open the card marketplace
+        2. Search for ...
+        3. Click ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: SkillStore version
+      placeholder: 0.1.1
+    validations:
+      required: true
+
+  - type: input
+    id: vscode
+    attributes:
+      label: VS Code version
+      placeholder: 1.95.0
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Windows 11, macOS 15, Ubuntu 24.04...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Marketplace / card view
+        - Sidebar tree
+        - Install / upgrade / uninstall
+        - Publish
+        - Settings / registries
+        - Local registry server
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Paste relevant output from the SkillStore output channel.
+      render: shell
+    validations:
+      required: false

@@ -1,0 +1,34 @@
+# Source and build configuration (the extension only needs dist/ and media/ at runtime)
+src/**
+tsconfig.json
+package-lock.json
+*.tsbuildinfo
+
+# Tests, examples, and the local registry are not bundled
+test/**
+examples/**
+local-registry/**
+.demo-registry/**
+.github/**
+.vscode/**
+
+# Repository metadata
+.git/**
+.gitignore
+.gitattributes
+.editorconfig
+*.vsix
+.zero/**
+.opencode/**
+
+# Source maps are optional: remove the next line to debug the packaged extension
+dist/**/*.map
+
+# Local analysis notes and browser test artifacts
+.playwright-mcp/**
+
+# Logs, performance scripts, and unused icons
+logs/**
+scripts/**
+media/icon.svg
+skillsbot-home.yml

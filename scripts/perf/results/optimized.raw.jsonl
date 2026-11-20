@@ -1,0 +1,288 @@
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 1,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 10.1,
+  "totalRequests": 9573,
+  "qps": 950,
+  "avgMs": 1,
+  "p50": 1,
+  "p90": 1,
+  "p95": 2,
+  "p99": 3,
+  "maxMs": 15,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 318560721,
+  "server": {
+    "cpuAvgPct": 11.8,
+    "rssAvgMB": 112.7,
+    "rssMaxMB": 112.9
+  }
+}
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 10,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 10.1,
+  "totalRequests": 16193,
+  "qps": 1607.6,
+  "avgMs": 6.2,
+  "p50": 5,
+  "p90": 10,
+  "p95": 11,
+  "p99": 13,
+  "maxMs": 26,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 538854461,
+  "server": {
+    "cpuAvgPct": 16.1,
+    "rssAvgMB": 114.4,
+    "rssMaxMB": 114.5
+  }
+}
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 50,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 15.1,
+  "totalRequests": 24810,
+  "qps": 1646.5,
+  "avgMs": 30.2,
+  "p50": 28,
+  "p90": 33,
+  "p95": 39,
+  "p99": 59,
+  "maxMs": 89,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 825602370,
+  "server": {
+    "cpuAvgPct": 16,
+    "rssAvgMB": 118.9,
+    "rssMaxMB": 118.9
+  }
+}
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 100,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 15.1,
+  "totalRequests": 24263,
+  "qps": 1609.8,
+  "avgMs": 61.9,
+  "p50": 58,
+  "p90": 69,
+  "p95": 74,
+  "p99": 118,
+  "maxMs": 157,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 807399851,
+  "server": {
+    "cpuAvgPct": 16.1,
+    "rssAvgMB": 119.1,
+    "rssMaxMB": 119.1
+  }
+}
+{
+  "mode": "searchAll",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=&limit=500",
+  "concurrency": 100,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 10.3,
+  "totalRequests": 3536,
+  "qps": 343.3,
+  "avgMs": 286.5,
+  "p50": 282,
+  "p90": 310,
+  "p95": 315,
+  "p99": 558,
+  "maxMs": 742,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 1177056608,
+  "server": {
+    "cpuAvgPct": 17.1,
+    "rssAvgMB": 143.8,
+    "rssMaxMB": 161.4
+  }
+}
+{
+  "mode": "categories",
+  "url": "http://127.0.0.1:4010/api/v1/categories",
+  "concurrency": 100,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 10.1,
+  "totalRequests": 102464,
+  "qps": 10098,
+  "avgMs": 9.7,
+  "p50": 9,
+  "p90": 12,
+  "p95": 15,
+  "p99": 21,
+  "maxMs": 82,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 34427904,
+  "server": {
+    "cpuAvgPct": 14.2,
+    "rssAvgMB": 161,
+    "rssMaxMB": 161.9
+  }
+}
+{
+  "mode": "resolve",
+  "url": "http://127.0.0.1:4010/api/v1/resolve?slug=skill-1377",
+  "concurrency": 100,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 10.1,
+  "totalRequests": 99770,
+  "qps": 9857.7,
+  "avgMs": 10,
+  "p50": 9,
+  "p90": 12,
+  "p95": 14,
+  "p99": 21,
+  "maxMs": 88,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 11174240,
+  "server": {
+    "cpuAvgPct": 12.1,
+    "rssAvgMB": 163.1,
+    "rssMaxMB": 163.2
+  }
+}
+{
+  "mode": "mixed",
+  "url": "http://127.0.0.1:4010/api/v1/categories",
+  "concurrency": 100,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 15.1,
+  "totalRequests": 26830,
+  "qps": 1777.5,
+  "avgMs": 55.9,
+  "p50": 42,
+  "p90": 104,
+  "p95": 124,
+  "p99": 179,
+  "maxMs": 245,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 623652857,
+  "server": {
+    "cpuAvgPct": 17.5,
+    "rssAvgMB": 259.5,
+    "rssMaxMB": 292.6
+  }
+}
+{
+  "mode": "download",
+  "url": "http://127.0.0.1:4010/api/v1/skills/global/skill-4353/versions/1.0.0/download",
+  "concurrency": 50,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 10.1,
+  "totalRequests": 54294,
+  "qps": 5365.5,
+  "avgMs": 9.2,
+  "p50": 7,
+  "p90": 15,
+  "p95": 18,
+  "p99": 30,
+  "maxMs": 116,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 9719168,
+  "server": {
+    "cpuAvgPct": 25.1,
+    "rssAvgMB": 260.1,
+    "rssMaxMB": 278
+  }
+}
+{
+  "mode": "download",
+  "url": "http://127.0.0.1:4010/api/v1/skills/global/skill-1913/versions/1.0.0/download",
+  "concurrency": 100,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 10.1,
+  "totalRequests": 54188,
+  "qps": 5344.5,
+  "avgMs": 18.4,
+  "p50": 15,
+  "p90": 27,
+  "p95": 31,
+  "p99": 96,
+  "maxMs": 125,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 9700417,
+  "server": {
+    "cpuAvgPct": 24.5,
+    "rssAvgMB": 264.2,
+    "rssMaxMB": 276.5
+  }
+}
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 100,
+  "gzip": true,
+  "etag": false,
+  "durationSec": 10.1,
+  "totalRequests": 13582,
+  "qps": 1342.8,
+  "avgMs": 73.6,
+  "p50": 68,
+  "p90": 82,
+  "p95": 90,
+  "p99": 203,
+  "maxMs": 290,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 24488346,
+  "server": {
+    "cpuAvgPct": 24.1,
+    "rssAvgMB": 311.4,
+    "rssMaxMB": 311.8
+  }
+}
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 100,
+  "gzip": false,
+  "etag": true,
+  "durationSec": 10.1,
+  "totalRequests": 19589,
+  "qps": 1944.3,
+  "avgMs": 51.1,
+  "p50": 49,
+  "p90": 53,
+  "p95": 56,
+  "p99": 99,
+  "maxMs": 170,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 3330100,
+  "server": {
+    "cpuAvgPct": 16.2,
+    "rssAvgMB": 312.2,
+    "rssMaxMB": 312.3
+  }
+}

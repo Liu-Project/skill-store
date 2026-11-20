@@ -1,0 +1,24 @@
+{
+  "mode": "mixed",
+  "url": "http://127.0.0.1:4020/api/v1/search?q=alpha&limit=50",
+  "concurrency": 100,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 45.1,
+  "totalRequests": 80499,
+  "qps": 1784.2,
+  "avgMs": 55.9,
+  "p50": 42,
+  "p90": 105,
+  "p95": 120,
+  "p99": 172,
+  "maxMs": 259,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 1878300661,
+  "server": {
+    "cpuAvgPct": 17.1,
+    "rssAvgMB": 326.6,
+    "rssMaxMB": 344.4
+  }
+}

@@ -1,0 +1,509 @@
+{
+  "name": "skillstore",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "0.1.1",
+  "publisher": "Liu-Hongcun",
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "theme": "dark",
+    "color": "#0b1224"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "vscode": "^1.85.0",
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "keywords": [
+    "agent-skills",
+    "skills",
+    "skill-marketplace",
+    "ai-agents",
+    "claude-code",
+    "claude-skills",
+    "codex",
+    "cursor",
+    "copilot",
+    "mcp",
+    "registry",
+    "vscode-extension"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "capabilities": {
+    "virtualWorkspaces": false,
+    "untrustedWorkspaces": {
+      "supported": false
+    }
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "skillstore",
+          "title": "%viewContainer.title%",
+          "icon": "media/skillstore.svg"
+        }
+      ]
+    },
+    "views": {
+      "skillstore": [
+        {
+          "id": "skillstore.marketView",
+          "name": "%view.market.name%",
+          "icon": "media/market.svg",
+          "contextualTitle": "%view.market.contextualTitle%"
+        },
+        {
+          "id": "skillstore.installedView",
+          "name": "%view.installed.name%",
+          "icon": "media/installed.svg",
+          "contextualTitle": "%view.installed.contextualTitle%"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "skillstore.marketView",
+        "contents": "%viewsWelcome.market%",
+        "when": "skillstore.noSource"
+      },
+      {
+        "view": "skillstore.installedView",
+        "contents": "%viewsWelcome.installed%",
+        "when": "skillstore.noInstalled"
+      }
+    ],
+    "commands": [
+      {
+        "command": "skillstore.openSettings",
+        "title": "%command.openSettings%",
+        "category": "SkillStore",
+        "icon": "$(gear)"
+      },
+      {
+        "command": "skillstore.openMarketPanel",
+        "title": "%command.openMarketPanel%",
+        "category": "SkillStore",
+        "icon": "$(layout)"
+      },
+      {
+        "command": "skillstore.searchSkill",
+        "title": "%command.searchSkill%",
+        "category": "SkillStore",
+        "icon": "$(search)"
+      },
+      {
+        "command": "skillstore.refreshMarket",
+        "title": "%command.refreshMarket%",
+        "category": "SkillStore",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "skillstore.filterCategory",
+        "title": "%command.filterCategory%",
+        "category": "SkillStore",
+        "icon": "$(filter)"
+      },
+      {
+        "command": "skillstore.refreshInstalled",
+        "title": "%command.refreshInstalled%",
+        "category": "SkillStore",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "skillstore.refreshAll",
+        "title": "%command.refreshAll%",
+        "category": "SkillStore",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "skillstore.installSkill",
+        "title": "%command.installSkill%",
+        "category": "SkillStore",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "skillstore.upgradeSkill",
+        "title": "%command.upgradeSkill%",
+        "category": "SkillStore",
+        "icon": "$(arrow-up)"
+      },
+      {
+        "command": "skillstore.uninstallSkill",
+        "title": "%command.uninstallSkill%",
+        "category": "SkillStore",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "skillstore.showSkillDetail",
+        "title": "%command.showSkillDetail%",
+        "category": "SkillStore",
+        "icon": "$(info)"
+      },
+      {
+        "command": "skillstore.openSkillFolder",
+        "title": "%command.openSkillFolder%",
+        "category": "SkillStore",
+        "icon": "$(folder-opened)"
+      },
+      {
+        "command": "skillstore.openSkillManifest",
+        "title": "%command.openSkillManifest%",
+        "category": "SkillStore",
+        "icon": "$(file-text)"
+      },
+      {
+        "command": "skillstore.copySkillCoordinate",
+        "title": "%command.copySkillCoordinate%",
+        "category": "SkillStore",
+        "icon": "$(copy)"
+      },
+      {
+        "command": "skillstore.publishSkill",
+        "title": "%command.publishSkill%",
+        "category": "SkillStore",
+        "icon": "$(cloud-upload)"
+      },
+      {
+        "command": "skillstore.checkUpdates",
+        "title": "%command.checkUpdates%",
+        "category": "SkillStore",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "skillstore.updateSkill",
+        "title": "%command.updateSkill%",
+        "category": "SkillStore",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "skillstore.selectRegistry",
+        "title": "%command.selectRegistry%",
+        "category": "SkillStore",
+        "icon": "$(server)"
+      },
+      {
+        "command": "skillstore.addRegistry",
+        "title": "%command.addRegistry%",
+        "category": "SkillStore",
+        "icon": "$(add)"
+      },
+      {
+        "command": "skillstore.removeRegistry",
+        "title": "%command.removeRegistry%",
+        "category": "SkillStore",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "skillstore.openRegistry",
+        "title": "%command.openRegistry%",
+        "category": "SkillStore"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "skillstore.searchSkill",
+          "when": "view == skillstore.marketView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "skillstore.publishSkill",
+          "when": "view == skillstore.marketView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "skillstore.refreshMarket",
+          "when": "view == skillstore.marketView",
+          "group": "navigation@3"
+        },
+        {
+          "command": "skillstore.openSettings",
+          "when": "view == skillstore.marketView",
+          "group": "navigation@4"
+        },
+        {
+          "command": "skillstore.filterCategory",
+          "when": "view == skillstore.marketView",
+          "group": "navigation@5"
+        },
+        {
+          "command": "skillstore.openMarketPanel",
+          "when": "view == skillstore.marketView",
+          "group": "navigation@6"
+        },
+        {
+          "command": "skillstore.refreshInstalled",
+          "when": "view == skillstore.installedView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "skillstore.checkUpdates",
+          "when": "view == skillstore.installedView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "skillstore.openSettings",
+          "when": "view == skillstore.installedView",
+          "group": "navigation@3"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "skillstore.installSkill",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkill",
+          "group": "inline@1"
+        },
+        {
+          "command": "skillstore.showSkillDetail",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkill",
+          "group": "inline@2"
+        },
+        {
+          "command": "skillstore.copySkillCoordinate",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkill",
+          "group": "9_copy@1"
+        },
+        {
+          "command": "skillstore.upgradeSkill",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkillUpgradable",
+          "group": "inline@1"
+        },
+        {
+          "command": "skillstore.installSkill",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkillUpgradable",
+          "group": "inline@2"
+        },
+        {
+          "command": "skillstore.showSkillDetail",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkillUpgradable",
+          "group": "inline@3"
+        },
+        {
+          "command": "skillstore.copySkillCoordinate",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkillUpgradable",
+          "group": "9_copy@1"
+        },
+        {
+          "command": "skillstore.installSkill",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkillOverwrite",
+          "group": "inline@1"
+        },
+        {
+          "command": "skillstore.showSkillDetail",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkillOverwrite",
+          "group": "inline@2"
+        },
+        {
+          "command": "skillstore.copySkillCoordinate",
+          "when": "view == skillstore.marketView && viewItem == skillstoreSkillOverwrite",
+          "group": "9_copy@1"
+        },
+        {
+          "command": "skillstore.openSkillFolder",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalled",
+          "group": "inline@1"
+        },
+        {
+          "command": "skillstore.openSkillManifest",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalled",
+          "group": "inline@2"
+        },
+        {
+          "command": "skillstore.uninstallSkill",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalled",
+          "group": "inline@3"
+        },
+        {
+          "command": "skillstore.updateSkill",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalled",
+          "group": "inline@4"
+        },
+        {
+          "command": "skillstore.showSkillDetail",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalled",
+          "group": "inline@5"
+        },
+        {
+          "command": "skillstore.copySkillCoordinate",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalled",
+          "group": "9_copy@1"
+        },
+        {
+          "command": "skillstore.openSkillFolder",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalledExternal",
+          "group": "inline@1"
+        },
+        {
+          "command": "skillstore.openSkillManifest",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalledExternal",
+          "group": "inline@2"
+        },
+        {
+          "command": "skillstore.showSkillDetail",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalledExternal",
+          "group": "inline@3"
+        },
+        {
+          "command": "skillstore.copySkillCoordinate",
+          "when": "view == skillstore.installedView && viewItem == skillstoreInstalledExternal",
+          "group": "9_copy@1"
+        }
+      ]
+    },
+    "walkthroughs": [
+      {
+        "id": "skillstore.gettingStarted",
+        "title": "%walkthrough.title%",
+        "description": "%walkthrough.description%",
+        "steps": [
+          {
+            "id": "browse",
+            "title": "%walkthrough.browse.title%",
+            "description": "%walkthrough.browse.description%",
+            "media": {
+              "markdown": "media/walkthrough/browse.md"
+            },
+            "completionEvents": [
+              "onCommand:skillstore.openMarketPanel"
+            ]
+          },
+          {
+            "id": "install",
+            "title": "%walkthrough.install.title%",
+            "description": "%walkthrough.install.description%",
+            "media": {
+              "markdown": "media/walkthrough/install.md"
+            },
+            "completionEvents": [
+              "onCommand:skillstore.installSkill"
+            ]
+          },
+          {
+            "id": "manage",
+            "title": "%walkthrough.manage.title%",
+            "description": "%walkthrough.manage.description%",
+            "media": {
+              "markdown": "media/walkthrough/manage.md"
+            },
+            "completionEvents": [
+              "onCommand:skillstore.refreshInstalled"
+            ]
+          },
+          {
+            "id": "publish",
+            "title": "%walkthrough.publish.title%",
+            "description": "%walkthrough.publish.description%",
+            "media": {
+              "markdown": "media/walkthrough/publish.md"
+            },
+            "completionEvents": [
+              "onCommand:skillstore.publishSkill"
+            ]
+          }
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "%config.title%",
+      "properties": {
+        "skillstore.registries": {
+          "type": "array",
+          "default": [
+            {
+              "id": "local",
+              "name": "Local registry",
+              "url": "http://127.0.0.1:3030"
+            }
+          ],
+          "description": "%config.registries.desc%",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "url"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "%config.registries.id.desc%"
+              },
+              "name": {
+                "type": "string",
+                "description": "%config.registries.name.desc%"
+              },
+              "url": {
+                "type": "string",
+                "description": "%config.registries.url.desc%"
+              }
+            }
+          }
+        },
+        "skillstore.activeRegistry": {
+          "type": "string",
+          "default": "local",
+          "description": "%config.activeRegistry.desc%"
+        },
+        "skillstore.registry": {
+          "type": "string",
+          "default": "",
+          "description": "%config.registry.desc%"
+        },
+        "skillstore.installDir": {
+          "type": "string",
+          "default": "~/.zeroagent/skills",
+          "description": "%config.installDir.desc%"
+        },
+        "skillstore.openMarketOnStartup": {
+          "type": "boolean",
+          "default": false,
+          "description": "%config.openMarketOnStartup.desc%"
+        },
+        "skillstore.autoUpdateIntervalMinutes": {
+          "type": "number",
+          "default": 20,
+          "minimum": 5,
+          "maximum": 1440,
+          "description": "%config.autoUpdateIntervalMinutes.desc%"
+        },
+        "skillstore.showStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "%config.showStatusBar.desc%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "package": "npx --yes @vscode/vsce package --allow-missing-repository --no-rewrite-relative-links",
+    "lint": "tsc --noEmit -p ./",
+    "pretest": "npm run compile",
+    "test": "mocha test/unit test/integration",
+    "test:unit": "mocha test/unit",
+    "test:integration": "mocha test/integration",
+    "verify": "npm run lint && npm test",
+    "registry": "node local-registry/server.js --port 3030",
+    "demo": "node scripts/demo.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.5",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.14.0",
+    "@types/vscode": "~1.85.0",
+    "mocha": "^12.0.3",
+    "typescript": "^5.4.5"
+  }
+}

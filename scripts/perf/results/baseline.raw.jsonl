@@ -1,0 +1,220 @@
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 1,
+  "durationSec": 10.1,
+  "totalRequests": 962,
+  "qps": 95.5,
+  "avgMs": 10.4,
+  "p50": 10,
+  "p90": 12,
+  "p95": 13,
+  "p99": 15,
+  "maxMs": 22,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 32012474,
+  "server": {
+    "cpuAvgPct": 16,
+    "rssAvgMB": 83.9,
+    "rssMaxMB": 85.4
+  }
+}
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 10,
+  "durationSec": 10.1,
+  "totalRequests": 1033,
+  "qps": 102.1,
+  "avgMs": 97.2,
+  "p50": 78,
+  "p90": 164,
+  "p95": 170,
+  "p99": 184,
+  "maxMs": 262,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 34375141,
+  "server": {
+    "cpuAvgPct": 16.6,
+    "rssAvgMB": 164.3,
+    "rssMaxMB": 202.1
+  }
+}
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 50,
+  "durationSec": 15.5,
+  "totalRequests": 1654,
+  "qps": 106.6,
+  "avgMs": 460.2,
+  "p50": 442,
+  "p90": 486,
+  "p95": 498,
+  "p99": 927,
+  "maxMs": 1414,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 55040158,
+  "server": {
+    "cpuAvgPct": 16.6,
+    "rssAvgMB": 202.9,
+    "rssMaxMB": 202.9
+  }
+}
+{
+  "mode": "search",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 100,
+  "durationSec": 15.9,
+  "totalRequests": 1667,
+  "qps": 104.8,
+  "avgMs": 925.4,
+  "p50": 919,
+  "p90": 1003,
+  "p95": 1016,
+  "p99": 1848,
+  "maxMs": 2782,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 55472759,
+  "server": {
+    "cpuAvgPct": 16.5,
+    "rssAvgMB": 203.2,
+    "rssMaxMB": 203.4
+  }
+}
+{
+  "mode": "searchAll",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=&limit=500",
+  "concurrency": 100,
+  "durationSec": 10.5,
+  "totalRequests": 2781,
+  "qps": 264.7,
+  "avgMs": 367.8,
+  "p50": 360,
+  "p90": 401,
+  "p95": 410,
+  "p99": 722,
+  "maxMs": 1206,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 925733718,
+  "server": {
+    "cpuAvgPct": 16.4,
+    "rssAvgMB": 232,
+    "rssMaxMB": 256.9
+  }
+}
+{
+  "mode": "categories",
+  "url": "http://127.0.0.1:4010/api/v1/categories",
+  "concurrency": 100,
+  "durationSec": 10.1,
+  "totalRequests": 9938,
+  "qps": 980.3,
+  "avgMs": 100.9,
+  "p50": 97,
+  "p90": 112,
+  "p95": 119,
+  "p99": 196,
+  "maxMs": 378,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 3339168,
+  "server": {
+    "cpuAvgPct": 16.4,
+    "rssAvgMB": 215.1,
+    "rssMaxMB": 215.7
+  }
+}
+{
+  "mode": "resolve",
+  "url": "http://127.0.0.1:4010/api/v1/resolve?slug=skill-3702",
+  "concurrency": 100,
+  "durationSec": 10.1,
+  "totalRequests": 68091,
+  "qps": 6749.7,
+  "avgMs": 14.7,
+  "p50": 14,
+  "p90": 20,
+  "p95": 24,
+  "p99": 32,
+  "maxMs": 103,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 7626192,
+  "server": {
+    "cpuAvgPct": 15.3,
+    "rssAvgMB": 216.6,
+    "rssMaxMB": 216.7
+  }
+}
+{
+  "mode": "mixed",
+  "url": "http://127.0.0.1:4010/api/v1/search?q=alpha&limit=50",
+  "concurrency": 100,
+  "durationSec": 15.8,
+  "totalRequests": 2147,
+  "qps": 136.1,
+  "avgMs": 714.9,
+  "p50": 706,
+  "p90": 835,
+  "p95": 871,
+  "p99": 1362,
+  "maxMs": 2130,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 51536214,
+  "server": {
+    "cpuAvgPct": 16.4,
+    "rssAvgMB": 226.5,
+    "rssMaxMB": 240.8
+  }
+}
+{
+  "mode": "download",
+  "url": "http://127.0.0.1:4010/api/v1/skills/global/skill-0199/versions/1.0.0/download",
+  "concurrency": 50,
+  "durationSec": 10.1,
+  "totalRequests": 47862,
+  "qps": 4743.5,
+  "avgMs": 10.4,
+  "p50": 9,
+  "p90": 13,
+  "p95": 17,
+  "p99": 60,
+  "maxMs": 224,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 8567777,
+  "server": {
+    "cpuAvgPct": 15.4,
+    "rssAvgMB": 249.3,
+    "rssMaxMB": 261.8
+  }
+}
+{
+  "mode": "download",
+  "url": "http://127.0.0.1:4010/api/v1/skills/global/skill-4663/versions/1.0.0/download",
+  "concurrency": 100,
+  "durationSec": 10.1,
+  "totalRequests": 48661,
+  "qps": 4823.2,
+  "avgMs": 20.5,
+  "p50": 19,
+  "p90": 24,
+  "p95": 28,
+  "p99": 74,
+  "maxMs": 103,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 8710722,
+  "server": {
+    "cpuAvgPct": 15.5,
+    "rssAvgMB": 255,
+    "rssMaxMB": 262.7
+  }
+}

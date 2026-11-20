@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="SkillStore - the Agent Skills marketplace for VS Code">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1224"/>
+      <stop offset="0.55" stop-color="#111a33"/>
+      <stop offset="1" stop-color="#1a1038"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b6ff0"/>
+      <stop offset="0.55" stop-color="#5b8cff"/>
+      <stop offset="1" stop-color="#8b5cff"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b9c8ff"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="24" fill="url(#grid)"/>
+  <circle cx="1010" cy="60" r="220" fill="url(#glow1)"/>
+  <circle cx="1120" cy="300" r="240" fill="url(#glow2)"/>
+  <rect x="1" y="1" width="1198" height="318" rx="23" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="82" width="156" height="156" rx="38" fill="url(#brand)"/>
+    <path d="M100 140h100l6 66a9 9 0 0 1-9 10H103a9 9 0 0 1-9-10l6-66z" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M124 140v-11a26 26 0 0 1 52 0v11" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+    <path d="M150 155l7 17 17 7-17 7-7 17-7-17-17-7 17-7 7-17z" fill="#ffffff"/>
+  </g>
+
+  <text x="264" y="146" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="58" font-weight="700" fill="url(#title)" letter-spacing="1">SkillStore</text>
+  <text x="266" y="184" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="20" fill="#9fb0d6">The Agent Skills marketplace for VS Code</text>
+
+  <g font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#dbe4ff">
+    <rect x="266" y="208" width="150" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#7aa2ff" stroke-opacity="0.35"/>
+    <text x="341" y="230" text-anchor="middle">VS Code Extension</text>
+
+    <rect x="428" y="208" width="186" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#7aa2ff" stroke-opacity="0.35"/>
+    <text x="521" y="230" text-anchor="middle">Open Registry API</text>
+
+    <rect x="626" y="208" width="132" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#7aa2ff" stroke-opacity="0.35"/>
+    <text x="692" y="230" text-anchor="middle">Apache-2.0</text>
+  </g>
+
+  <g transform="translate(830 54)" opacity="0.96">
+    <g transform="rotate(-6 120 90)">
+      <rect x="0" y="30" width="250" height="150" rx="18" fill="#0f1830" stroke="#ffffff" stroke-opacity="0.10"/>
+    </g>
+    <g transform="rotate(4 120 90)">
+      <rect x="34" y="12" width="250" height="150" rx="18" fill="#121d3a" stroke="#7aa2ff" stroke-opacity="0.28"/>
+      <rect x="56" y="36" width="44" height="44" rx="12" fill="url(#brand)"/>
+      <path d="M78 45l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" fill="#ffffff"/>
+      <rect x="114" y="40" width="112" height="12" rx="6" fill="#ffffff" fill-opacity="0.75"/>
+      <rect x="114" y="62" width="76" height="10" rx="5" fill="#ffffff" fill-opacity="0.30"/>
+      <rect x="56" y="96" width="176" height="8" rx="4" fill="#ffffff" fill-opacity="0.18"/>
+      <rect x="56" y="112" width="140" height="8" rx="4" fill="#ffffff" fill-opacity="0.12"/>
+      <rect x="56" y="134" width="62" height="18" rx="9" fill="#2da44e" fill-opacity="0.9"/>
+      <text x="87" y="147" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Installed</text>
+      <rect x="128" y="134" width="62" height="18" rx="9" fill="#ffffff" fill-opacity="0.10"/>
+      <text x="159" y="147" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#c9d6f5">v1.3.3</text>
+    </g>
+  </g>
+</svg>

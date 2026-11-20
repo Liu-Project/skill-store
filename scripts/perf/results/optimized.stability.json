@@ -1,0 +1,24 @@
+{
+  "mode": "mixed",
+  "url": "http://127.0.0.1:4020/api/v1/categories",
+  "concurrency": 100,
+  "gzip": false,
+  "etag": false,
+  "durationSec": 120.1,
+  "totalRequests": 222009,
+  "qps": 1848,
+  "avgMs": 54.1,
+  "p50": 40,
+  "p90": 101,
+  "p95": 117,
+  "p99": 174,
+  "maxMs": 1209,
+  "errorRate": 0,
+  "errors": [],
+  "bytesTransferred": 5191283147,
+  "server": {
+    "cpuAvgPct": 17,
+    "rssAvgMB": 293.7,
+    "rssMaxMB": 334.8
+  }
+}

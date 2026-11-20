@@ -1,0 +1,59 @@
+# 依赖
+node_modules/
+
+# 编译产物
+dist/
+*.tsbuildinfo
+out/
+
+# 打包产物
+*.vsix
+*.vsix.tmp
+*.vsixmanifest
+
+# 测试与覆盖率
+coverage/
+.nyc_output/
+.vscode-test/
+.vscode-test.*
+test-results/
+*.lcov
+.playwright-mcp/
+
+# 本地技能源运行时数据（发布包与索引由 local-registry 自动生成）
+.demo-registry/
+local-registry/packages/
+local-registry/index.json
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.pid
+*.tmp
+*.tmp-*
+*.temp
+.tmp/
+tmp/
+skillsbot-home.yml
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+*.swp
+*.swo
+*~
+
+# 本地智能体工具状态
+.zero/
+.opencode/
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+*.pem
+*.key
